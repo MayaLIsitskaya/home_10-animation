@@ -1,0 +1,145 @@
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 100;
+}
+.title__bold {
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+}
+
+.animation-zone {
+  position: relative;
+  border: 1px solid #FFB347;
+  height: 50rem;
+}
+
+.orange {
+  position: absolute;
+  background-color: #FA9C1B;
+  width: 50rem;
+  height: 50rem;
+  clip-path: polygon(0 0, 10% 0, 41% 100%, 0% 100%);
+  z-index: 3;
+}
+
+.orange-yellow {
+  position: absolute;
+  margin-top: 35rem;
+  width: 100%;
+  height: 15rem;
+  background-color: #FFB347;
+  z-index: 2;
+}
+
+.yellow {
+  position: absolute;
+  margin-left: 40%;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: #F9E699;
+  text-align: center;
+  z-index: 1;
+}
+.yellow-left {
+  height: 250px;
+  width: 240px;
+  border-radius: 50%;
+  background-color: #F9E699;
+}
+
+.small-circle {
+  margin-top: 10%;
+  margin-left: 20%;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #F9E699;
+}
+
+.pillar {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  height: 150px;
+  width: 14px;
+  background-color: #323232;
+  z-index: 4;
+}
+.pillar-pendulum {
+  position: absolute;
+  left: 7px;
+  height: 100px;
+  width: 1px;
+  background-color: #323232;
+  z-index: 4;
+  transform-origin: 50% 0;
+  animation: pendulum-animation 3s linear infinite;
+}
+.pillar-pendulum__circle {
+  position: absolute;
+  top: 90px;
+  left: -14px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #323232;
+}
+
+@keyframes pendulum-animation {
+  0%, 100% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+}
+.pillar-shadow {
+  position: absolute;
+  left: 48%;
+  bottom: 0;
+  height: 150px;
+  width: 14px;
+  background-color: #323232;
+  z-index: 4;
+  transform: scaleY(-1) skewX(35deg) translateX(-224%) translateY(7%);
+}
+.pillar-shadow__pendulum {
+  position: absolute;
+  left: 3px;
+  height: 100px;
+  width: 1px;
+  background-color: #323232;
+  z-index: 4;
+  transform-origin: 50% 0;
+  animation: pendulum-animation 3s linear infinite;
+}
+.pillar-shadow__circle {
+  position: absolute;
+  top: 90px;
+  left: -14px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #323232;
+  animation: circle-animation 3s linear infinite;
+}
+
+@keyframes circle-animation {
+  0%, 100% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
