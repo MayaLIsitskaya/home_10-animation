@@ -80,7 +80,7 @@ body {
   background-color: #323232;
   z-index: 4;
   transform-origin: 50% 0;
-  animation: pendulum-animation 3s linear infinite;
+  animation: pendulum-animation 3s ease-in-out infinite;
 }
 .pillar-pendulum__circle {
   position: absolute;
@@ -93,11 +93,14 @@ body {
 }
 
 @keyframes pendulum-animation {
-  0%, 100% {
-    transform: rotate(50deg);
+  0% {
+    transform: rotate(-45deg);
   }
   50% {
-    transform: rotate(-50deg);
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
   }
 }
 .pillar-shadow {
@@ -113,32 +116,33 @@ body {
 .pillar-shadow__pendulum {
   position: absolute;
   left: 3px;
-  height: 100px;
+  height: 150px;
   width: 1px;
   background-color: #323232;
   z-index: 4;
   transform-origin: 50% 0;
-  animation: pendulum-animation 3s linear infinite;
+  animation: pendulum-animation 3s ease-in-out infinite;
 }
 .pillar-shadow__circle {
   position: absolute;
-  top: 90px;
+  top: 120px;
   left: -14px;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   background-color: #323232;
-  animation: circle-animation 3s linear infinite;
+  animation: circle-animation 3s ease-in-out infinite;
 }
 
 @keyframes circle-animation {
-  0%, 100% {
-    transform: rotate(50deg);
+  0% {
+    transform: rotate(-45deg);
   }
   50% {
-    transform: rotate(-50deg);
-    height: 50px;
-    width: 50px;
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
   }
 }
 
